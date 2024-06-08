@@ -16,7 +16,7 @@ Here is an example:
 ```sh
 Welcome! You are running bashtutor v1.0.
 The currently loaded module is 'test_module/task_list.sh' with 2 tasks.
-You may run 'task' or 'hint' anytime to display  the current task again or a help message respectedly.
+You may run 'task' or 'hint' anytime to display the current task again or a help message respectedly.
 
 Enter 'echo hello world'
 (bashtutor) $ echo helo world
