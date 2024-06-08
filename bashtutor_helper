@@ -1,0 +1,65 @@
+#!/bin/bash
+
+function bashtutor_greet() {
+    echo -n -e "\033[32m"
+    echo "Welcome! You are running bashtutor v1.0."
+    echo "The currently loaded module is '$1' with ${#BASHTUTOR_TASK_FILE_LIST[@]} tasks."
+    echo "You may run 'task' or 'hint' anytime to display" \
+         " the current task agian or a help message respectedly." 
+    echo -e "\033[0m"
+}
+
+function bashtutor_completed() {
+    echo -n -e "\033[32m"
+    echo "Module completed. Thanks for flying bashtutor!"
+    echo -n -e "\033[0m"
+    exit
+}
+
+function bashtutor_wrap() {
+    source $BASHTUTOR_MODULE_DIRNAME/${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}
+
+    $@
+    r=$?
+
+    unset description
+    unset hint
+    unset validate
+
+    return $r
+}
+
+if [ $# -eq 0 ]; then
+    LAST_CMD="$(history | tail -n 1 | cut -c 8-)"
+
+    bashtutor_wrap validate $LAST_CMD
+    if [ $? == 1 ]; then
+        BASHTUTOR_PROGRESS=$(expr $BASHTUTOR_PROGRESS + 1)
+
+        [ -z "${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}" ] && bashtutor_completed
+
+        task
+    fi
+else
+    set -o errexit
+        BASHTUTOR_PROGRESS=0
+        BASHTUTOR_MODULE_DIRNAME=$(dirname $1)
+
+        declare -a BASHTUTOR_TASK_FILE_LIST
+        source $1 ||
+            (echo "'$1' does not seem like a module. Exitting..." && exit 1)
+        ! [ -v BASHTUTOR_TASK_FILE_LIST ] &&
+            echo "Module sourced, but no tasks were specified. Exitting..." &&
+            exit 1
+
+        alias task='bashtutor_wrap description'
+        alias hint='bashtutor_wrap hint'
+
+        PROMPT_COMMAND=()
+        PROMPT_COMMAND="source ${PWD}/bashtutor_helper"
+
+        bashtutor_greet $1
+
+        bashtutor_wrap description
+    set +o errexit
+fi
