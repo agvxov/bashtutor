@@ -1,0 +1,10 @@
+BASHTUTOR_TASK_FILE_LIST+=(greeting.sh)
+BASHTUTOR_TASK_FILE_LIST+=(command.sh)
+BASHTUTOR_TASK_FILE_LIST+=(arguments_1.sh)
+BASHTUTOR_TASK_FILE_LIST+=(arguments_2.sh)
+BASHTUTOR_TASK_FILE_LIST+=(arguments_3.sh)
+
+BOLD="\033[1m"
+ITALICS="\033[3m"
+NORMAL="\033[0m"
+BLUE="\033[34m"
