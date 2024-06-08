@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 [ $# -eq 0 ] && echo "bashtutor: no module name was provided, nothing to do." && exit 0
 
