@@ -1,0 +1,2 @@
+BASHTUTOR_TASK_FILE_LIST+=(greetin.sh)
+BASHTUTOR_TASK_FILE_LIST+=(greetout.sh)
