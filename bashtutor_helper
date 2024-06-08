@@ -38,6 +38,7 @@ if [ $# -eq 0 ]; then
 
         [ -z "${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}" ] && bashtutor_completed
 
+        echo ""
         task
     fi
 else
