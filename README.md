@@ -16,7 +16,7 @@ Here is an example:
 ```sh
 Welcome! You are running bashtutor v1.0.
 The currently loaded module is 'test_module/task_list.sh' with 2 tasks.
-You may run 'task' or 'hint' anytime to display  the current task agian or a help message respectedly.
+You may run 'task' or 'hint' anytime to display  the current task again or a help message respectedly.
 
 Enter 'echo hello world'
 (bashtutor) $ echo helo world
@@ -35,7 +35,7 @@ Module completed. Thanks for flying bashtutor!
 A module consists of a _task file list_ and an arbitrary number of _task files_.
 For clarity's sake, both of these must be written in bash.
 
-Bellow is a detailed explaination,
+Bellow is a detailed explanation,
 but consulting `test_module/` might get you up to speed faster.
 
 #### Task file list
@@ -63,11 +63,11 @@ if you want to do that for some reason,
 you are free to do so,
 however task files are evaluated after each command,
 this means that adding expensive operations
-will detirate the user experience.
+will deteriorate the user experience.
 In such case you should set some symbols
-which **will** persist and check for their existance/state.
+which **will** persist and check for their existence/state.
 
-##### desciption
+##### description
 This function is run once when the task is initiated
 or whenever the user calls `task`.
 
@@ -86,4 +86,4 @@ You may inspect each bit with `$<int>` or the whole command as one with `$*`
 Since task files are sourced, all variable the user's shell has is available to you.
 You may use this fact to perform arbitrary checks,
 for example inspect files in `$PWD`.
-To make a task considered complete and to move on the the next one, return 1.
+To make a task considered complete and to move on the next one, return 1.
