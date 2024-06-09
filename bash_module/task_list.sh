@@ -3,8 +3,10 @@ BASHTUTOR_TASK_FILE_LIST+=(command.sh)
 BASHTUTOR_TASK_FILE_LIST+=(arguments_1.sh)
 BASHTUTOR_TASK_FILE_LIST+=(arguments_2.sh)
 BASHTUTOR_TASK_FILE_LIST+=(arguments_3.sh)
-
-BOLD="\033[1m"
-ITALICS="\033[3m"
-NORMAL="\033[0m"
-BLUE="\033[34m"
+BASHTUTOR_TASK_FILE_LIST+=(help.sh)
+# missing command type task; 'program' might not be the best word, but neither is 'command'
+BASHTUTOR_TASK_FILE_LIST+=(variables_1.sh)
+BASHTUTOR_TASK_FILE_LIST+=(variables_2.sh)
+BASHTUTOR_TASK_FILE_LIST+=(variables_3.sh)
+BASHTUTOR_TASK_FILE_LIST+=(glob.sh)
+BASHTUTOR_TASK_FILE_LIST+=(scripts.sh)
