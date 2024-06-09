@@ -1,9 +1,15 @@
 function description() {
-    # NOTE: i should add something describing this quide,
-    #        said description will be highly dependant on
-    #        how closely i will follow
-    #        https://mywiki.wooledge.org/BashGuide
-    echo "<placeholder>"
+    echo -e "This module is based on ${MAGENTA}https://mywiki.wooledge.org/BashGuide${NORMAL}" \
+            "(which is the recommended guide of #bash @ libera and the hacker known as 4chan," \
+            "but do note that this material is not endorsed or sponsored by said source)." \
+            "While whole paragraphs have been lifted," \
+            "the guide has been altered and expanded to fit the bashtutor format." \
+            "Terms have been changed in some cases in mays that do not follow" \
+            "the offical Bash documentations terminology." \
+            "Said changes were performed with consideration to understandability and" \
+            "user experience."
+    echo ""
+    echo "This module is licensed under CC-BY-SA 4.0 as to comply with the source material."
     echo ""
     echo -e "${BLUE}# Enter any (e.g. empty) command to continue.${NORMAL}"
 }
