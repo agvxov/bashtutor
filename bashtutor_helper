@@ -29,19 +29,7 @@ function bashtutor_wrap() {
     return $r
 }
 
-if [ $# -eq 0 ]; then
-    LAST_CMD="$(history | tail -n 1 | cut -c 8-)"
-
-    bashtutor_wrap validate $LAST_CMD
-    if [ $? == 1 ]; then
-        BASHTUTOR_PROGRESS=$(expr $BASHTUTOR_PROGRESS + 1)
-
-        [ -z "${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}" ] && bashtutor_completed
-
-        echo ""
-        task
-    fi
-else
+if [ $# -ne 0 ]; then # Initial call
     set -o errexit
         BASHTUTOR_PROGRESS=0
         BASHTUTOR_MODULE_DIRNAME=$(dirname $1)
@@ -57,10 +45,22 @@ else
         alias hint='bashtutor_wrap hint'
 
         PROMPT_COMMAND=()
-        PROMPT_COMMAND="source ${PWD}/bashtutor_helper"
+        PROMPT_COMMAND="BASHTUTOR_R=\$?; source ${PWD}/bashtutor_helper"
 
         bashtutor_greet $1
 
         bashtutor_wrap description
     set +o errexit
+else # Event callback
+    LAST_CMD="$(history | tail -n 1 | cut -c 8-)"
+
+    bashtutor_wrap validate $LAST_CMD
+    if [ $? == 1 ]; then
+        BASHTUTOR_PROGRESS=$(expr $BASHTUTOR_PROGRESS + 1)
+
+        [ -z "${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}" ] && bashtutor_completed
+
+        echo ""
+        task
+    fi
 fi
