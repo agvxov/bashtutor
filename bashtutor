@@ -4,5 +4,4 @@
 
 export PROMPT_COMMAND="source bashtutor_helper $1"
 export HISTFILE=""
-export PS1="(bashtutor) \\$ "
 bash --norc --noprofile

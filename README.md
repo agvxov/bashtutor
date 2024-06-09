@@ -87,3 +87,24 @@ Since task files are sourced, all variable the user's shell has is available to 
 You may use this fact to perform arbitrary checks,
 for example inspect files in `$PWD`.
 To make a task considered complete and to move on the next one, return 1.
+
+#### Variables
+When inside module scripts the following variables will be defined for you:
+
+BASHTUTOR_R    : the return value of the user's last command
+BASHTUTOR_PS1   : the primary prompt bashtutor uses
+
+Along side with the following, which all represent ANSI escape sequences:
++ NORMAL
++ ITALICS
++ BOLD
++ RED
++ GREEN
++ YELLOW
++ BLUE
++ MAGENTA
++ CYAN
+
+NOTE: WHITE and BLACK are purposefully not provided
+to discourage the usage of colors which may be hard to see depending on the
+underlying terminal's settings.

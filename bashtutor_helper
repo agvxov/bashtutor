@@ -33,6 +33,17 @@ if [ $# -ne 0 ]; then # Initial call
     set -o errexit
         BASHTUTOR_PROGRESS=0
         BASHTUTOR_MODULE_DIRNAME=$(dirname $1)
+        BASHTUTOR_PS1="(bashtutor) \\$ "
+
+        NORMAL="\033[0m"
+        ITALICS="\033[3m"
+        BOLD="\033[1m"
+        RED="\033[31m"
+        GREEN="\033[32m"
+        YELLOW="\033[33m"
+        BLUE="\033[34m"
+        MAGENTA="\033[35m"
+        CYAN="\033[36m"
 
         declare -a BASHTUTOR_TASK_FILE_LIST
         source $1 ||
@@ -43,6 +54,8 @@ if [ $# -ne 0 ]; then # Initial call
 
         alias task='bashtutor_wrap description'
         alias hint='bashtutor_wrap hint'
+
+        PS1=$BASHTUTOR_PS1
 
         PROMPT_COMMAND=()
         PROMPT_COMMAND="BASHTUTOR_R=\$?; source ${PWD}/bashtutor_helper"
