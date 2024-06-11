@@ -45,6 +45,14 @@ if [ $# -ne 0 ]; then # Initial call
         MAGENTA="\033[35m"
         CYAN="\033[36m"
 
+        BASHTUTOR_TMPDIR=$(mktemp -d)
+
+        cp -r ${BASHTUTOR_MODULE_DIRNAME} ${BASHTUTOR_TMPDIR}
+        cp bashtutor_helper ${BASHTUTOR_TMPDIR}
+        cd ${BASHTUTOR_TMPDIR}
+        echo $PWD
+        ls
+
         declare -a BASHTUTOR_TASK_FILE_LIST
         source $1 ||
             (echo "'$1' does not seem like a module. Exiting..." && exit 1)
