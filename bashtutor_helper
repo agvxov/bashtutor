@@ -60,6 +60,8 @@ if [ $# -ne 0 ]; then # Initial call
         PROMPT_COMMAND=()
         PROMPT_COMMAND="BASHTUTOR_R=\$?; source ${PWD}/bashtutor_helper"
 
+        IGNOREEOF=3
+
         bashtutor_greet $1
 
         bashtutor_wrap description
