@@ -52,9 +52,7 @@ function hint() {
 function validate() {
     shopt -s nullglob
     if [ -z "$(echo nt_*)" ]; then
-        echo "no nt"
         for i in $(seq 1 1 100); do
-            echo "$i"
             ! [ -e "note_$i" ] && return 0
         done
         unset DUMMY_FILES_CREATED
