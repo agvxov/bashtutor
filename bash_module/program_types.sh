@@ -78,7 +78,7 @@ Scripts are bash commands in a file. We will learn about them in more detail lat
 
     unset D
 
-    echo -e "${BLUE}# I have defined a surprise alias for you. Run it to continue!"
+    echo -e "${BLUE}# I have defined a surprise alias for you. Run it to continue!${NORMAL}"
 }
 
 function hint() {
@@ -86,7 +86,7 @@ function hint() {
 }
 
 function validate() {
-    if [  "$1" != "surprise"]; then
+    if [  "$1" == "surprise" ]; then
         unset FMT_WIDTH
         unalias surprise
         return 1

@@ -21,7 +21,7 @@ function hint() {
 }
 
 function validate() {
-    if ! "$BASHTUTOR_R"; then
+    if [ $BASHTUTOR_R != 0 ]; then
         return 1
     fi
 }

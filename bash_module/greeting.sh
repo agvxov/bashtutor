@@ -4,14 +4,14 @@ function description() {
             "but do note that this material is not endorsed or sponsored by said source)." \
             "While whole paragraphs have been lifted," \
             "the guide has been altered and expanded to fit the bashtutor format." \
-            "Terms have been changed in some cases in mays that do not follow" \
-            "the offical Bash documentations terminology." \
+            "Terms have been changed in some cases in ways that do not follow" \
+            "the official Bash documentations terminology." \
             "Said changes were performed with consideration to understandability and" \
             "user experience."
     echo ""
     echo "This module is licensed under CC-BY-SA 4.0 as to comply with the source material."
     echo ""
-    echo -e "${BLUE}# Enter any (e.g. empty) command to continue.${NORMAL}"
+    echo -e "${BLUE}# Enter any (e.g. empty) command to continue!${NORMAL}"
 }
 
 function hint() {

@@ -5,17 +5,17 @@ function description() {
     echo ""
     echo "Bash does not perform word splitting at every whitespace character," \
          "rather every amount of whitespace will result in one split."
-    echo "For example:"
+    echo -e "For example:${YELLOW}"
     echo "  $ echo Hello     World"
     echo "  Hello World"
-    echo ""
+    echo -e "${NORMAL}"
     echo -e "The extra spaces make no difference." \
             "If we ${BOLD}want${NORMAL} the extra whitespace," \
             "we need to pass the sentence as one single argument." \
-            "We can do this by using quotes:"
+            "We can do this by using quotes:${YELLOW}"
     echo "  $ echo \"This    is    a    test.\""
     echo "  This    is    a    test."
-    echo ""
+    echo -e "${NORMAL}"
     echo -e "Quotes group everything inside them into a single argument." \
             "The argument is: '${ITALICS}This    is    a    test.${NORMAL}'" \
             "... specifically spaced." \
@@ -27,11 +27,11 @@ function description() {
          "used for creating empty files or updating their" \
          "file access dates."
     echo ""
-    echo -e "${BLUE}# Commit a war crime by creating a file with a space in its name.${NORMAL}"
+    echo -e "${BLUE}# Commit a war crime by creating a file with a space in its name!${NORMAL}"
 }
 
 function hint() {
-    echo "$ touch \"space space space those are 3 spaces\""
+    echo -e "${YELLOW}$ touch \"space space space those are 3 spaces\"${NORMAL}"
 }
 
 function validate() {

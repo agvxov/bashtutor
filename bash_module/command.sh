@@ -1,5 +1,5 @@
 function description() {
-    echo -e "BASH is an acronym for" \
+    echo -e "${BOLD}BASH${NORMAL} is an acronym for" \
             "${BOLD}B${NORMAL}ourne ${BOLD}A${NORMAL}gain ${BOLD}Sh${NORMAL}ell." \
             "It is based on the Bourne shell and is mostly compatible with its features. "
     echo ""
@@ -10,9 +10,9 @@ function description() {
     echo ""
     echo "We will start start by getting you up speed with how to issue a command." \
          "For this you will have to know how a command looks like:"
-    echo ""
+    echo -e "${YELLOW}"
     echo "  $ program-name argument-1 argument-2 argument-N"
-    echo ""
+    echo -e "${NORMAL}"
     echo "Many things in Bash have to be separated with white spaces," \
          "such as the program name and its arguments."
     echo ""
@@ -32,8 +32,8 @@ function description() {
          "portion as a 'program'."
     echo ""
     echo -e "${BLUE}# To continue, enter what part of the command is 'a'" \
-            "in the following command:${NORMAL}"
-    echo "  $ touch a"
+            "in the following command!${NORMAL}"
+    echo -e "  ${YELLOW}$ touch a${NORMAL}"
 }
 
 function hint() {

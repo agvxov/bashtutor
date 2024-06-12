@@ -11,7 +11,7 @@ function description() {
          "section of the Bash manual."
     echo ""
     echo -e "${BLUE}# Change your prompt to anything" \
-            "different than the stock bashtutor one.${NORMAL}"
+            "different than the stock bashtutor one!${NORMAL}"
 }
 
 function hint() {
@@ -21,7 +21,7 @@ function hint() {
 }
 
 function validate() {
-    if [  "$PS1" != "$BASHTUTOR_PS1"]; then
+    if [  "$PS1" != "$BASHTUTOR_PS1" ]; then
         return 1
     fi
 }
