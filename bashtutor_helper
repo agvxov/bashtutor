@@ -52,13 +52,12 @@ if [ $# -ne 0 ]; then # Initial call
         alias task='bashtutor_wrap description'
         alias hint='bashtutor_wrap hint'
 
+        BASHTUTOR_PROGRESS=0
+        BASHTUTOR_PS1='(bashtutor) $ '
         PS1=$BASHTUTOR_PS1
         PROMPT_COMMAND=()
         PROMPT_COMMAND="BASHTUTOR_R=\$?; source ${PWD}/bashtutor_helper"
         IGNOREEOF=3 # We dont want the user to be able to quit by mistake
-
-        BASHTUTOR_PROGRESS=0
-        BASHTUTOR_PS1='(bashtutor) $ '
 
         NORMAL="\033[0m"
         BOLD="\033[1m"
