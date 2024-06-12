@@ -82,6 +82,8 @@ else # Event callback
         [ -z "${BASHTUTOR_TASK_FILE_LIST[$BASHTUTOR_PROGRESS]}" ] && bashtutor_completed
 
         echo ""
+        echo -e "${GREEN}($((${BASHTUTOR_PROGRESS}))/$((${#BASHTUTOR_TASK_FILE_LIST[@]})))${NORMAL}"
+        echo ""
         task
     fi
 fi
