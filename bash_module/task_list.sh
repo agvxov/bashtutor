@@ -12,12 +12,12 @@ BASHTUTOR_TASK_FILE_LIST+=(variable_config.sh)
 BASHTUTOR_TASK_FILE_LIST+=(exit_statuses.sh)
 BASHTUTOR_TASK_FILE_LIST+=(conditional_execution.sh) # cat learned
 BASHTUTOR_TASK_FILE_LIST+=(functions.sh)
-# redirections
-#BASHTUTOR_TASK_FILE_LIST+=(glob.sh) # WIP
+BASHTUTOR_TASK_FILE_LIST+=(redirections.sh)
+BASHTUTOR_TASK_FILE_LIST+=(glob.sh)
 BASHTUTOR_TASK_FILE_LIST+=(complex_expension_monk_task.sh)
 BASHTUTOR_TASK_FILE_LIST+=(logic.sh)
 BASHTUTOR_TASK_FILE_LIST+=(control.sh)
 # jobs
 BASHTUTOR_TASK_FILE_LIST+=(scripts.sh)
-# sourcing
+BASHTUTOR_TASK_FILE_LIST+=(sourcing.sh)
 BASHTUTOR_TASK_FILE_LIST+=(goodbye.sh)
