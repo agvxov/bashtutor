@@ -8,8 +8,8 @@ The initialization file of the module must be passed from the cli:
 ```sh
 $ bashtutor test_module/task_list.sh
 ```
-Afterwards and interactive shell is spawned which will monitor the user's
-progress _(offline, obviously)_ through the module,
+Afterwards an interactive shell is spawned which will monitor the user's
+progress _(offline, obviously)_ throughout the module,
 expressed as individual tasks.
 
 Here is an example:
@@ -82,7 +82,7 @@ This function *should* print some message which can help to user accomplish his 
 ##### validate
 This function is called after every command entered.
 The last command the user has entered is passed as the arguments.
-You may inspect each bit with `$<int>` or the whole command as one with `$*`
+You may inspect each bit with `$<int>` or the whole command as one with `$*`.
 Since task files are sourced, all variable the user's shell has is available to you.
 You may use this fact to perform arbitrary checks,
 for example inspect files in `$PWD`.
