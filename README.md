@@ -4,9 +4,10 @@
 ### Usage
 Bashtutor works on module bases.
 Each module may teach one specific thing or a broader concept.
-The initialization file of the module must be passed from the cli:
+Either a convention abiding module's path or the initialization file
+must be passed from the cli:
 ```sh
-$ bashtutor test_module/task_list.sh
+$ bashtutor test_module/
 ```
 Afterwards an interactive shell is spawned which will monitor the user's
 progress _(offline, obviously)_ throughout the module,
@@ -14,17 +15,16 @@ expressed as individual tasks.
 
 Here is an example:
 ```sh
-Welcome! You are running bashtutor v1.0.
-The currently loaded module is 'test_module/task_list.sh' with 2 tasks.
-You may run 'task' or 'hint' anytime to display the current task again or a help message respectedly.
+Welcome! You are running bashtutor v1.2.
+The currently loaded module is 'test_module/' with 2 tasks.
+You may run 'task' or 'hint' anytime to display the current task again or a help message respectably.
 
 Enter 'echo hello world'
-(bashtutor) $ echo helo world
-helo world
-(bashtutor) $ hint
-with your keyboard
 (bashtutor) $ echo hello world
 hello world
+
+(1/2)
+
 Enter 'echo goodbye world'
 (bashtutor) $ echo goodbye world
 goodbye world
@@ -44,6 +44,9 @@ and in what order they should be executed.
 This is done by appending file names to the array variable `${BASHTUTOR_TASK_FILE_LIST}`.
 Each task file name is assumed to be relative to the task file list.
 You may keep your tasks files in an arbitrary structure inside your module.
+The default task file name is `task_list.sh` and is automatically recognized.
+This has the advantage that the user will only have to pass the module directory,
+however it changes nothing else as long as the task file is passed explicitly.
 
 #### Task files
 Each task file must define the following functions:
@@ -91,8 +94,9 @@ To make a task considered complete and to move on the next one, return 1.
 #### Variables
 When inside module scripts the following variables will be defined for you:
 ```
-BASHTUTOR_R     : the return value of the user's last command
-BASHTUTOR_PS1   : the primary prompt bashtutor uses
+BASHTUTOR_R       : the return value of the user's last command
+BASHTUTOR_PS1     : the primary prompt bashtutor uses
+BASHTUTOR_VERSION : version number in 'v<MAJOR>.<MINOR>' notation
 ```
 
 Along side with the following, which all represent ANSI escape sequences:

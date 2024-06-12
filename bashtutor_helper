@@ -2,7 +2,7 @@
 
 function bashtutor_greet() {
     echo -n -e "\033[32m"
-    echo "Welcome! You are running bashtutor v1.0."
+    echo "Welcome! You are running bashtutor ${BASHTUTOR_VERSION}."
     echo "The currently loaded module is '$1' with ${#BASHTUTOR_TASK_FILE_LIST[@]} tasks."
     echo "You may run 'task' or 'hint' anytime to display" \
          "the current task again or a help message respectably." 
@@ -58,6 +58,7 @@ if [ $# -ne 0 ]; then # Initial call
         PROMPT_COMMAND=()
         PROMPT_COMMAND="BASHTUTOR_R=\$?; source ${PWD}/bashtutor_helper"
         IGNOREEOF=3 # We dont want the user to be able to quit by mistake
+        BASHTUTOR_VERSION="v1.2"
 
         NORMAL="\033[0m"
         BOLD="\033[1m"
