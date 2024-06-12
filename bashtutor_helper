@@ -50,8 +50,6 @@ if [ $# -ne 0 ]; then # Initial call
         cp -r ${BASHTUTOR_MODULE_DIRNAME} ${BASHTUTOR_TMPDIR}
         cp bashtutor_helper ${BASHTUTOR_TMPDIR}
         cd ${BASHTUTOR_TMPDIR}
-        echo $PWD
-        ls
 
         declare -a BASHTUTOR_TASK_FILE_LIST
         source $1 ||
