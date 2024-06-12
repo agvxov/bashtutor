@@ -1,4 +1,4 @@
-alias surprise='echo good job'
+alias surprise_alias='echo good job'
 
 function description() {
     if [ -n "${FMT_WIDTH}"]; then
@@ -86,9 +86,9 @@ function hint() {
 }
 
 function validate() {
-    if [  "$1" == "surprise" ]; then
+    if [  "$1" == "surprise_alias" ]; then
         unset FMT_WIDTH
-        unalias surprise
+        unalias surprise_alias
         return 1
     fi
 }

@@ -6,7 +6,7 @@ function description() {
             "except they don't reside in separate files," \
             "and they don't cause a separate process to be executed." \
             "However, they take arguments just like scripts. Take this for example:${YELLOW}"
-    echo "  $ sum() {"
+    echo "  $ function sum() {"
     echo '  >   echo "$1 + $2 = $(($1 + $2))'
     echo "  > }"
     echo -e "${NORMAL}"

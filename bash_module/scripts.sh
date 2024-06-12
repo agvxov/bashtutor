@@ -12,7 +12,7 @@ function description() {
     echo ""
     echo -e "Running bash scripts is similarly easy." \
             "You can just pass the file name as an argument to the" \
-            "'${ITALICS}bash${NORMAL}' program."
+            "'${YELLOW}bash${NORMAL}' program."
     echo ""
     echo -e "${BLUE}# Create your first Bash script (it can be anything) and run it${NORMAL}"
 }

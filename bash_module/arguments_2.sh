@@ -23,9 +23,9 @@ function description() {
             "- Bash removes them before handing the argument to echo." \
             "echo prints this single argument out just like it always does."
     echo ""
-    echo "touch is another common program" \
-         "used for creating empty files or updating their" \
-         "file access dates."
+    echo -e "${YELLOW}touch${NORMAL} is another common program" \
+            "used for creating empty files or updating their" \
+            "file access dates."
     echo ""
     echo -e "${BLUE}# Commit a war crime by creating a file with a space in its name!${NORMAL}"
 }

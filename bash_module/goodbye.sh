@@ -1,5 +1,5 @@
 function description() {
-    echo -e "${GREEN}That is about it for this guide.${NORMAL}"
+    echo -e "${GREEN}${BOLD}That is about it for this guide.${NORMAL}"
     echo ""
     echo "We have touched on every big concept regarding Bash." \
          "However you should know that the devil is in the details." \

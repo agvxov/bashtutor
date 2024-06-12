@@ -1,4 +1,11 @@
 function description() {
+    FILES="a aa aaa aaaa \
+          b bb bbbb \
+          c ccc cccc \
+          bc bd bk \
+          baaab booob biiib buuub beeeb bűb"
+    touch $FILES
+
     echo "Globs are a type of pattern matching." \
          "They can be used to match filenames or other strings."
     echo ""
@@ -16,13 +23,20 @@ function description() {
          "because it only matches the at, not the whole string." \
          "A glob of ca*, however, would match cat."
     echo ""
-    echo -e "${BLUE}# ?!.${NORMAL}"
+    echo -e "${BLUE}# A bunch of files have been created in your directory." \
+            "Glob your way out of this hole by producing the printing the exact text" \
+            "as below!${NORMAL}"
+    echo -e "${GREEN}a aa aaa aaaa bc bűb aaaa bbbb cccc${NORMAL}"
 }
 
 function hint() {
-    echo ""
+    echo "The first 3, the next 1, the next 1 after that and" \
+         "the closing 3 belong to the same pattern."
 }
 
 function validate() {
-    true
+    if [ "$($*)" == "a aa aaa aaaa bc bűb aaaa bbbb cccc" ]; then
+        rm $FILES
+        return 1
+    fi
 }
