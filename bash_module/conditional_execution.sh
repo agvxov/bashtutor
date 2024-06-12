@@ -33,7 +33,7 @@ function description() {
          "usage in scripts. You will see about that in time..."
     echo ""
     echo -e "${BLUE}# Ensure that the following condition becomes true:${NORMAL}"
-    INTERNAL_CONDITION='touch ${MYFILE} && cat "new file" || false && ! [ "" == "$a" ]'
+    INTERNAL_CONDITION='touch "${MYFILE}" && cat "new file" || false && ! [ "" == "$a" ]'
     echo -e "  ${YELLOW}${INTERNAL_CONDITION}${NORMAL}"
 }
 
