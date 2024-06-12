@@ -1,5 +1,5 @@
 # Bashtutor
-> Utility to interactively teach CLIs, command line tasks and Bash itself.
+> Easily extendable utility to interactively showcase or teach CLIs, command line tasks, workflows and Bash itself.
 
 ### Usage
 Bashtutor works on module bases.
