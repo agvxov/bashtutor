@@ -76,6 +76,13 @@ and much appreciation."
     echo " 2>&1 # stderr to stdout"
     echo " <    # file to stdin"
     echo -e "${NORMAL}"
+    echo ""
+    echo -e "${CYAN}Note:${NORMAL} there exists a special virtual file" \
+            "'${YELLOW}/dev/null'." \
+            "You can write whatever to it and it will just discard it." \
+            "It is often used to silence command output, errors or both" \
+            "with a redirection to it."
+    echo ""
     echo -e "${BLUE}# Below is a partial copy-pasta." \
             "We defined tutor_function1 and tutor_function2" \
             "for you which output various segments of the text." \
