@@ -31,6 +31,11 @@ goodbye world
 Module completed. Thanks for flying bashtutor!
 ```
 
+### Bash module
+The Bash module (`bash_module/`) is provided both as a proof of concept and
+legit learning material for Bash.
+Feel free to take it on a test ride.
+
 ### Creating a module
 A module consists of a _task file list_ and an arbitrary number of _task files_.
 For clarity's sake, both of these must be written in bash.
