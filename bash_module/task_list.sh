@@ -17,7 +17,7 @@ BASHTUTOR_TASK_FILE_LIST+=(tasks/glob.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/complex_expension_monk_task.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/logic.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/control.sh)
-# jobs
+BASHTUTOR_TASK_FILE_LIST+=(tasks/jobs.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/scripts.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/sourcing.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/goodbye.sh)
