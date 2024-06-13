@@ -80,19 +80,19 @@ what he should be doing
 ##### hint
 This is a function is run only when the user explicitly asks for a hint.
 
-This function *should* print some message which can help to user accomplish his task.
+This function *should* print some message which can help the user accomplish his task.
 
 ##### validate
 This function is called after every command entered.
-The last command the user has entered is passed as the arguments.
+The last command the user has entered is passed in arguments.
 You may inspect each bit with `$<int>` or the whole command as one with `$*`.
-Since task files are sourced, all variable the user's shell has is available to you.
+Since task files are sourced, all variables the user's shell has is available to you.
 You may use this fact to perform arbitrary checks,
 for example inspect files in `$PWD`.
-To make a task considered complete and to move on the next one, return 1.
+To make a task considered complete and to initiate moving on to the next one, `return 1`.
 
 #### Variables
-When inside module scripts the following variables will be defined for you:
+The following variables will be available to you inside module scripts:
 ```
 BASHTUTOR_R       : the return value of the user's last command
 BASHTUTOR_PS1     : the primary prompt bashtutor uses
@@ -111,5 +111,5 @@ Along side with the following, which all represent ANSI escape sequences:
 + `CYAN`
 
 **NOTE:** WHITE and BLACK are purposefully not provided
-to discourage the usage of colors which may be hard to see depending on the
-underlying terminal's settings.
+to discourage the usage of colors which could be hard to see depending on the
+underlying terminal.
