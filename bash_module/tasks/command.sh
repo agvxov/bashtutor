@@ -8,7 +8,7 @@ function description() {
          "The term shell is most often associated capabilities to communicate with the" \
          "operating system."
     echo ""
-    echo "We will start start by getting you up speed with how to issue a command." \
+    echo "We will start by getting you up speed with how to issue a command." \
          "For this you will have to know how a command looks like:"
     echo -e "${YELLOW}"
     echo "  $ program-name argument-1 argument-2 argument-N"

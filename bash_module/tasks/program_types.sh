@@ -9,7 +9,7 @@ function description() {
         fi
     fi
     function myfmt () {
-        fmt -w $FMT_WIDTH <(echo "$1") | sed 's/^/    /'
+        fmt -w $FMT_WIDTH <(echo -e "$1") | sed 's/^/    /'
         echo ""
     }
 
@@ -30,7 +30,7 @@ They are only used in interactive shells and not in scripts. \
 An alias is a word that is mapped to a certain string. \
 Whenever that word is used as a command name, \
 it is replaced by the string before executing the command. \
-Aliases are controlled by the 'alias' builtin."
+Aliases are controlled by the '${YELLOW}alias${NORMAL}' builtin."
     myfmt "$D"
 
     echo -e "${GREEN}Keywords${NORMAL}"

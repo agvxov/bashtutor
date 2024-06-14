@@ -1,7 +1,9 @@
 function description() {
+    echo "That's right, its an argument."
+    echo ""
     echo -e "As you may see above, Bash is complaining." \
             "This is because it ${ITALICS}tried${NORMAL} to run what you just entered as" \
-            "a program, but failed finding it."
+            "a program, but failed finding it, because no such program is installed."
     echo ""
     echo -e "Now, let me introduce you to your first valid program: ${YELLOW}echo${NORMAL}." \
             "echo's purpose is to print to ${ITALICS}stdout${NORMAL} (more on that later)." \
