@@ -25,10 +25,10 @@ function description() {
          "and potentially a more economic replacement for a five year-old."
     echo ""
     echo -e "Inside functions you get access to a special program: '${YELLOW}return${NORMAL}'." \
-            "It can be used to make specify the functions exit value by passing" \
-            "it as an argument." \
+            "It can be used to specify the function's exit value by passing" \
+            "it a numeric argument." \
             "If you do not use return, the function's exit value will be the same as the" \
-            "last executed commands exit value."
+            "last executed command's exit value."
     echo ""
     echo -e "${BLUE}# Find a way to execute a command with an exit value of 231.${NORMAL}"
 }

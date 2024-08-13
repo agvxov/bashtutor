@@ -2,7 +2,7 @@ function description() {
     echo -e "Every command results in an exit code whenever it terminates." \
             "This exit code is used by whatever application started it" \
             "to evaluate whether everything went OK." \
-            "This exit code is like a return value from functions." \
+            "Conceptually this is like a return value from a function." \
             "It's an integer between 0 and 255 (inclusive)." \
             "Convention dictates that we use 0 to denote success," \
             "and any other number to denote failure of some sort." \
@@ -10,7 +10,7 @@ function description() {
             "and is used to hint as to what exactly went wrong."
     echo ""
     echo "For example the test program you have seen before ('[ 0 == 0 ]')" \
-         "utalizes exit statuses."
+         "utilizes exit statuses."
     echo ""
     echo -e "${BLUE}# Find a way to execute a command with a non-zero exit value.${NORMAL}"
 }

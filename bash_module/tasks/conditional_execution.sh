@@ -2,7 +2,7 @@ function description() {
     echo -e "Now that we know what exit codes are," \
             "and that an exit code of '${CYAN}0${NORMAL}'" \
             "means the command's execution was ${BOLD}successful${NORMAL}," \
-            "we'll learn to use this information." \
+            "we'll learn how to use this information." \
             "The easiest way of performing a certain action depending" \
             "on the success of a previous command is through the use of control operators." \
             "These operators are ${YELLOW}&&${NORMAL} and ${YELLOW}||${NORMAL}," \
@@ -27,11 +27,11 @@ function description() {
          "tho she is quite old and she is digital" \
          "so you may make as many (copies) as you wish:"
     echo -e "  ${YELLOW}$ cat <file>${NORMAL}"
-    echo "She can be used to conveniently print file contents to you console or" \
-         "as primarily intended con${BOLD}CAT${NORMAL}enate multiple files." \
-         "You should also know that she has a long history of being abused by pointed" \
-         "usage in scripts. You will see about that in time..."
-    echo ""
+    echo -e "She can be used to conveniently print file contents to you console or" \
+            "as primarily intended con${BOLD}CAT${NORMAL}enate multiple files." \
+            "You should also know that she has a long history of being abused by pointless" \
+            "usage in scripts. You will see about that in time..."
+    echo    ""
     echo -e "${BLUE}# Ensure that the following condition becomes true:${NORMAL}"
     INTERNAL_CONDITION='touch "${MYFILE}" && cat "new file" || false && ! [ "" == "$a" ]'
     echo -e "  ${YELLOW}${INTERNAL_CONDITION}${NORMAL}"

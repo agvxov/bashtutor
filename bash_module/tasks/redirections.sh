@@ -39,7 +39,7 @@ and much appreciation."
     echo "GUI applications also have these FDs," \
          "but they don't normally work with them."
     echo -e "${YELLOW}"
-    echo "  \$ read -p \"What is your name? \" name; echo \"Good day, $name.  Would you like some tea?\""
+    echo "  \$ read -p \"What is your name? \" name; echo \"Good day, $$name.  Would you like some tea?\""
     echo "  What is your name? lhunath"
     echo "  Good day, lhunath.  Would you like some tea?"
     echo -e "${NORMAL}"
@@ -58,27 +58,27 @@ and much appreciation."
             "${ITALICS}stderr${NORMAL} makes it easy to" \
             "keep errors separated from the application's normal messages."
     echo ""
-    echo "File Redirection involves changing a single FD to point to a file." \
-         "It only to ${BOLD}one command${NORMAL}." \
-         "The pattern of how it works is actually harder to describe than to" \
-         "recognize, so here is an example:"
+    echo -e "File Redirection involves manipulating a single FD, to make it point to a file." \
+            "It only applies to ${BOLD}one command${NORMAL}." \
+            "The pattern of how it works is actually harder to describe than to" \
+            "recognize, so here is an example:"
     echo -e "  ${YELLOW}$ echo 'The End. Never forget.' > b-ook.txt${NORMAL}"
-    echo -e "And here is a list:${YELLOW}"
-    echo "  >   # stdout to file with overwriting"
-    echo "  >>  # stdout to file with appending"
-    echo " 1>   # stdout to file with overwriting"
-    echo " 1>>  # stdout to file with appending"
-    echo " 2>   # stderr to file with overwriting"
-    echo " 2>>  # stderr to file with appending"
-    echo " &>   # stdout and stderr to file with overwriting"
-    echo " &>>  # stdout and stderr to file with appending"
-    echo " 1>&2 # stdout to stderr"
-    echo " 2>&1 # stderr to stdout"
-    echo " <    # file to stdin"
+    echo -e "And here is a list:"
+    echo -e "${YELLOW}  >   ${BLUE}# stdout to file with overwriting"
+    echo -e "${YELLOW}  >>  ${BLUE}# stdout to file with appending"
+    echo -e "${YELLOW} 1>   ${BLUE}# stdout to file with overwriting"
+    echo -e "${YELLOW} 1>>  ${BLUE}# stdout to file with appending"
+    echo -e "${YELLOW} 2>   ${BLUE}# stderr to file with overwriting"
+    echo -e "${YELLOW} 2>>  ${BLUE}# stderr to file with appending"
+    echo -e "${YELLOW} &>   ${BLUE}# stdout and stderr to file with overwriting"
+    echo -e "${YELLOW} &>>  ${BLUE}# stdout and stderr to file with appending"
+    echo -e "${YELLOW} 1>&2 ${BLUE}# stdout to stderr"
+    echo -e "${YELLOW} 2>&1 ${BLUE}# stderr to stdout"
+    echo -e "${YELLOW} <    ${BLUE}# file to stdin"
     echo -e "${NORMAL}"
     echo ""
     echo -e "${CYAN}Note:${NORMAL} there exists a special virtual file" \
-            "'${YELLOW}/dev/null'." \
+            "'${YELLOW}/dev/null${NORMAL}'." \
             "You can write whatever to it and it will just discard it." \
             "It is often used to silence command output, errors or both" \
             "with a redirection to it."

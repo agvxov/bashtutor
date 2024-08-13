@@ -89,9 +89,9 @@ This function *should* print some message which can help the user accomplish his
 
 ##### validate
 This function is called after every command entered.
-The last command the user has entered is passed in arguments.
+The last command the user has entered is passed in the arguments.
 You may inspect each bit with `$<int>` or the whole command as one with `$*`.
-Since task files are sourced, all variables the user's shell has is available to you.
+Since task files are sourced, all variables of the user's shell are available to you.
 You may use this fact to perform arbitrary checks,
 for example inspect files in `$PWD`.
 To make a task considered complete and to initiate moving on to the next one, `return 1`.

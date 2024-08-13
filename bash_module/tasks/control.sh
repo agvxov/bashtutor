@@ -13,10 +13,10 @@ function description() {
             "Sometimes we need to repeat things. For that," \
             "we need to use a ${ITALICS}loop${NORMAL}."
     echo ""
-    echo "Bash has a stunning number of loop variations:"
+    echo "Bash has a stunning number of loop variants:"
     echo -e "  ${GREEN}+${NORMAL} while    : Repeat based on a condition."
     echo -e "  ${GREEN}+${NORMAL} until    : Repeat based on the negate of condition."
-    echo -e "  ${GREEN}+${NORMAL} for-in   : Repeat the loop for each word. Think 'for-each'."
+    echo -e "  ${GREEN}+${NORMAL} for in   : Repeat the loop for each word. Think 'for-each'."
     echo -e "  ${GREEN}+${NORMAL} for (()) : Repeat with counter. C style loop."
     echo -e "  ${GREEN}+${NORMAL} select   : Interactive switch-like loop."
     echo ""
@@ -34,7 +34,7 @@ function description() {
             "taking up the value of each word."
     echo ""
     echo "You are one command away from being able to pull of a trick which I'm sure" \
-         "will come handy in the future time to time."
+         "will come handy in the future from time to time."
     echo -e "${YELLOW}  $ mv <old_name> <new_name>${NORMAL}"
     echo -e "With mv you can '${BOLD}M${NORMAL}o${BOLD}V${NORMAL}e' files." \
             "You only have to specify the current name and the new one."

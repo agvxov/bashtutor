@@ -1,4 +1,3 @@
-# XXX 'program' might not be the best word, but neither is 'command'
 BASHTUTOR_TASK_FILE_LIST+=(tasks/greeting.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/command.sh)
 BASHTUTOR_TASK_FILE_LIST+=(tasks/arguments_1.sh) # echo is learned

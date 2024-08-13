@@ -14,9 +14,9 @@ function description() {
          "your current working directory for you."
     echo ""
     echo -e "What you can do is to source the script," \
-            "instead of running it as a child."
+            "instead of running it as a child." \
             "You can do this using the '${YELLOW}source${NORMAL}'" \
-            "(or '${YELLOW}.${NORMAL}') command: "
+            "(or '${YELLOW}.${NORMAL}') command: " \
     echo -e "  ${YELLOW}\$ source ./myscript${NORMAL}"
     echo ""
     echo -e "${BLUE}# I'm sorry, but there is not much fun to be had with sourcing." \

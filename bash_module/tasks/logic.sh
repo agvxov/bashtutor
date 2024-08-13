@@ -1,8 +1,8 @@
 function description() {
     echo "Conditional execution is useful, but it can get real ugly real fast."
-    echo -e "If is a shell keyword that executes a command (or a set of commands)," \
+    echo -e "'if' is a shell keyword that executes a command (or a set of commands)," \
             "and checks that command's exit code to see whether it was successful." \
-            "Depending on that exit code, if executes a specific, different," \
+            "Depending on that exit code, 'if' executes a specific, different," \
             "block of commands.${YELLOW}"
     echo "  $ if true"
     echo "  > then echo \"It was true.\""
