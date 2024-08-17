@@ -17,7 +17,9 @@ function description() {
 function hint() {
     echo "Using man, open the 'bash' manual page" \
          "and search for the definition of the PS<int>" \
-         "variables."
+         "variables."\
+         "(If you have difficulty controlling man,"\
+         "open the internal help using 'h'!)"
 }
 
 function validate() {

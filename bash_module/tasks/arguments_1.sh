@@ -13,7 +13,7 @@ function description() {
 }
 
 function hint() {
-    echo -e "For example, '${YELLOW}echo Hello World${NORMAL}'"
+    echo -e "For example, '${YELLOW}\$ echo Hello World${NORMAL}'"
 }
 
 function validate() {

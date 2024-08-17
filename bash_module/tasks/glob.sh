@@ -30,8 +30,9 @@ function description() {
 }
 
 function hint() {
-    echo "The first 3, the next 1, the next 1 after that and" \
+    echo "The first 4, the next 1, the next 1 after that and" \
          "the closing 3 belong to the same pattern."
+    echo "| a aa aaa aaaa | bc | bűb | aaaa bbbb cccc |"
 }
 
 function validate() {

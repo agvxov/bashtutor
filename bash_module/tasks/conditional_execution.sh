@@ -38,7 +38,7 @@ function description() {
 }
 
 function hint() {
-    echo "You will need to fill up 2 variables and create 'new file' so cat" \
+    echo "You will need to fill up 2 variables and create 'new file', so that cat" \
          "does not encounter an error due to the file missing."
 }
 

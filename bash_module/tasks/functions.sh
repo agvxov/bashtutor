@@ -34,7 +34,7 @@ function description() {
 }
 
 function hint() {
-    echo "function a() { return 231; }; a"
+    echo -e "${YELLOW}\$ function a() { return 231; }; a${NORMAL}"
 }
 
 function validate() {

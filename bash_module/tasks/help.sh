@@ -18,7 +18,7 @@ function description() {
 }
 
 function hint() {
-    echo -e "  \$${YELLOW}man bash${NORMAL}"
+    echo -e "  ${YELLOW}\$ man bash${NORMAL}"
 }
 
 function validate() {

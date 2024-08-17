@@ -31,7 +31,7 @@ function description() {
 }
 
 function hint() {
-    echo -e "${YELLOW}$ touch \"space space space those are 3 spaces\"${NORMAL}"
+    echo -e "  ${YELLOW}\$ touch \"space space space those are 3 spaces\"${NORMAL}"
 }
 
 function validate() {

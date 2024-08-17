@@ -45,6 +45,7 @@ function description() {
 }
 
 function hint() {
+    echo "You will need to use a replacing expansion inside a for loop."
     echo -e "If you mess up, you can regenerate the files with" \
             "'${YELLOW}initialize_control_task${NORMAL}'."
 }

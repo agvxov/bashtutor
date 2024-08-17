@@ -25,7 +25,7 @@ function description() {
 }
 
 function hint() {
-    echo "  $ [ 0 == 0 ]"
+    echo -e "  ${YELLOW}\$ [ 0 == 0 ]${NORMAL}"
 }
 
 function validate() {

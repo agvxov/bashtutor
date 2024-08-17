@@ -28,7 +28,7 @@ function description() {
 
 function hint() {
     echo "Consider the following case, which relies on an understanding of" \
-         "the previous chapter on argument splitting:"
+         "the previous chapter about argument splitting:"
     echo -e "  ${YELLOW}$ song=\"My song.mp3\"${NORMAL}"
     echo -e "  ${YELLOW}$ rm \$song${NORMAL}"
     echo -e "  ${YELLOW}rm: My: No such file or directory${NORMAL}"
@@ -38,7 +38,7 @@ function hint() {
          "and only THEN executed the command. It was as if you had typed this:"
     echo -e "  ${YELLOW}$ rm My song.mp3${NORMAL}"
     echo "And according to the rules of word splitting," \
-         "Bash thought you meant for My and song.mp3 to mean two different files," \
+         "Bash thought you meant for My and song.mp3 to represent two different files," \
          "because there is white space between them and it wasn't quoted." \
          "How do we fix this?" \
          "We remember to put double quotes around every parameter expansion!"
